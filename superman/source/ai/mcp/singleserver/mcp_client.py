@@ -31,7 +31,7 @@ async def create_graph(session):
     tools = await load_mcp_tools(session)
 
     # LLM configuration 
-    llm = ChatDeepSeek(model="deepseek-chat", temperature=0, max_tokens=None, timeout=None, max_retries=2, api_key="sk-ee59acaacee04d37b2f4a2930cf8626c" )
+    llm = ChatDeepSeek(model="deepseek-chat", temperature=0, max_tokens=None, timeout=None, max_retries=2, api_key="DEEPSEEK_API" )
     llm_with_tools = llm.bind_tools(tools)
 
     # Prompt template with user/assistant chat only

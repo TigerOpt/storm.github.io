@@ -37,7 +37,7 @@ class State(TypedDict):
 # --- 'create_graph' now accepts the list of tools directly ---
 def create_graph(tools: list):
     # LLM configuration (remains the same)
-    llm = ChatDeepSeek(model="deepseek-chat", temperature=0, max_tokens=None, timeout=None, max_retries=2, api_key="sk-ee59acaacee04d37b2f4a2930cf8626c" )
+    llm = ChatDeepSeek(model="deepseek-chat", temperature=0, max_tokens=None, timeout=None, max_retries=2, api_key="{{DEEPSEEK_API}}" )
     llm_with_tools = llm.bind_tools(tools)
 
     # --- Updated system prompt to reflect new capabilities ---
